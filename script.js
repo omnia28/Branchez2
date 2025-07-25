@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (mobileLoginIcon) {
             mobileLoginIcon.addEventListener('click', function() {
-                window.location.href = 'C:\\Users\\AL_YOUSSEF\\Desktop\\Hala 2\\Entry\\login.html';
+                window.location.href = 'entry/login.html';
             });
         }
         
@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const loginButton = document.getElementById('loginButton');
         if (loginButton) {
             loginButton.addEventListener('click', function() {
-                window.location.href = 'C:\\Users\\AL_YOUSSEF\\Desktop\\Hala 2\\Entry\\login.html';
+                window.location.href = 'entry/login.html';
             });
         }
         
