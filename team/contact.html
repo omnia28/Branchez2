@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="contactstyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="home-page-wrapper">
+        <!-- Header Section -->
+        <header class="header">
+            <!-- Logo -->
+            <div class="header-logo">
+                <img src="LogoColoredwhite1.png" alt="Branchez Logo">
+            </div>
+
+            <!-- Mobile Login Icon -->
+            <div class="mobile-login-icon" id="mobileLoginIcon">
+               <p> Contact us</p>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <div class="mobile-nav-toggle" id="mobileNavToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <!-- Desktop Navigation and Login -->
+            <nav class="navbar" id="myNavbar">
+                <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\home.html" class="nav-item">Home</a>
+                <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Services\services.html" class="nav-item">Services</a>
+                <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Blogs\blogs.html" class="nav-item">Blogs</a>
+                <a href="about.html" class="nav-item">About</a>
+                <a href="contact.html" class="nav-item active">Contact Us</a>
+            </nav>
+
+            <button class="login-button" id="loginButton">
+                <span>Log in</span>
+                <img src="Frame.png" alt="Login Icon" class="login-icon">
+            </button>
+        </header>
+
+        <!-- Mobile Navigation Overlay -->
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <div class="mobile-nav-header">
+                <img src="Logo White 4.png" alt="Mobile Logo" class="mobile-nav-logo">
+                <div class="closebtn" id="closeMobileNav">&times;</div>
+            </div>
+            <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\home.html" class="mobile-nav-item active">Home</a>
+            <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Services\services.html" class="mobile-nav-item">Services</a>
+            <a href="c:\Users\AL_YOUSSEF\Desktop\Hala 2\Blogs\blogs.html" class="mobile-nav-item">Blogs</a>
+            <a href="about.html" class="mobile-nav-item">About</a>
+            <a href="contact.html" class="mobile-nav-item">Contact Us</a>
+        </div>
+
+  <div class="contact-page-wrapper">
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" id="phoneNumber" placeholder="+012 3456 789" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Write your message" required></textarea>
+                        </div>
+                        <button type="submit" class="send-message-button">Send Message</button>
+                    </form>
+                </div>
+               <div class="contact-image-container">
+                     <div id="eagleimagecontainer">
+                          <img id="eagleimage" src="ee.png" alt="Contact Image Placeholder">
+                     </div>
+                </div>
+            </div>
+
+        <div class="contact-details-group">
+        <div class="contact-info">
+            <p><i class="fas fa-phone-alt"></i> +971 52147 1307 <br> +20 3 4229558 </p>
+        </div>
+        <div class="location-info">
+            <p><i class="fas fa-map-marker-alt"></i> Dubai, UAE <br> Alex, Egypt</p>
+        </div>
+        <div class="email-info">
+            <p><i class="fas fa-envelope"></i> Business Inquiry: <br> info@brancherz.com</p>
+        </div>
+              <div class="social-media-icons-container">
+                 <div class="social-media-icons">
+                     <a href="https://www.linkedin.com/company/brancherz" aria-label="LinkedIn"><img src="1.png"></a>
+                     <a href="https://www.linkedin.com/company/brancherz" aria-label="Facebook"><img src="2.png"></a>
+                     <a href="#" aria-label="Instagram"><img src="3.png"></a>
+                   </div>
+               </div>
+      </div>
+
+    <!-- Custom Message Modal (reused from other pages for consistency) -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button" id="modalCloseBtn">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <script src="teamscript.js"></script>
+</body>
+</html>
