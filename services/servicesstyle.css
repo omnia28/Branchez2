@@ -232,8 +232,8 @@ left: 65px;
 /* Service Card Styles */
 .service-card {
     flex: 0 0 auto; /* Changed from flex: 0 0 auto; to allow shrinking */
-    width: 346px; /* Default fixed width for desktop */
-    height: 473px; /* Default fixed height for desktop */
+    width: 330px; /* Default fixed width for desktop */
+    height: 440px; /* Default fixed height for desktop */
     background-color: #0D0D0D; /* Dark background for cards */
     border-radius: 15px;
     overflow: hidden;
@@ -250,7 +250,7 @@ left: 65px;
 /* Card Inner for 3D flip */
 .service-card .card-inner {
     width: 100%;
-    height: calc(100% - 40px); /* Adjust height for service name text */
+    height: 100%; /* Adjust height for service name text */
     position: relative;
     transform-style: preserve-3d;
     transition: transform 0.6s;

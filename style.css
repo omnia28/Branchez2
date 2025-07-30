@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 /* ========== GENERAL STYLES ========== */
 * {
     margin: 0;
@@ -114,7 +118,6 @@ body {
     opacity: 1;
     top: 17px;
     left: 65px;
-
 }
 
 /* Navigation Styles */
@@ -127,21 +130,25 @@ body {
 
 .navbar .nav-item {
     color: #7D7B7B;
+    font-family: 'Open Sans';
     text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     transition: all 0.3s ease;
+    line-height: 100%;
     padding: 5px 0;
 }
 
 .navbar .nav-item.active {
     text-decoration: underline;
+    text-decoration-thickness: 0px;
+    font-family: 'Open Sans';
     color: #FFFFFF;
 }
 
 .navbar .nav-item:hover:not(.active) {
     color: #99CA3C;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .navbar .nav-item.active:hover {
@@ -174,20 +181,22 @@ body {
 .login-button {
     background-color: #0D0D0D;
     border: 1px solid #99CA3C;
-    color: white;
-    padding: 10px 20px;
+    color: #91CC1F;
+    font-family: 'Open Sans';
+    padding: 10px 65px;
     border-radius: 25px;
     display: flex;
     align-items: center;
     gap: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
-    font-size: 1.1em;
+    font-size: 19px;
     font-weight: 600;
 }
 
 .login-button .login-icon {
-    height: 16px;
+    height: 30px;
+    width: 25px;
     transition: opacity 0.3s ease;
 }
 
@@ -283,15 +292,19 @@ body {
     /* Add padding from the top */
     /* Added for the line break */
     border-bottom: 1.5px solid #FFFFFFD6;
+    border-width: 1.5px;
     /* Dark line at the bottom of div-4 */
     padding-bottom: 80px;
     /* Add padding to separate content from the line */
 }
 
+
 /* First Section Layout */
 .div-1 {
     display: flex;
     gap: 50px;
+    position: relative;
+    top: -40px;
 }
 
 .left-div,
@@ -410,7 +423,7 @@ body {
 }
 
 .section-title {
-    font-family: 'Changa', sans-serif;
+    font-family: 'Changa';
     font-weight: 700;
     font-size: 5vw;
     /* Adjusted font size as per your latest provided code */
@@ -425,7 +438,12 @@ body {
 }
 
 .services-title {
-    text-align: left;
+    text-align: center;
+    /* position: relative;
+    left: 475px; */
+    /* margin-bottom: 9px;  */
+    display: block;
+    margin: 0 auto;
 }
 
 .services-scroll-animation-container {
@@ -459,6 +477,27 @@ body {
     /* Centers the image */
 }
 
+@media (max-width: 768px) {
+    #services-animated-photo {
+        width: 80vw;
+        /* Fixed width */
+        height: 80vw;
+        /* Fixed height */
+        object-fit: contain;
+        /* Ensures images maintain aspect ratio */
+        /* max-width: 100%; /* Prevents overflow */
+        /* max-height: 100%; Prevents overflow */
+        transition: opacity 0.2s ease;
+        /* Add these to prevent any size fluctuations */
+        /* min-width: 75%;
+    min-height: 75%; */
+        display: block;
+        /* Removes any inline spacing issues */
+        margin: 0 auto;
+        /* Centers the image */
+    }
+}
+
 /* Third Section (Div-3) */
 .div-3 {
     flex-direction: column;
@@ -481,7 +520,7 @@ body {
     grid-template-columns: repeat(7, 1fr);
     /* Desktop: Exactly 7 columns */
     margin: 0 auto;
-    padding: 40px 20px;
+    /* padding: 40px 20px; */
     gap: 30px 40px;
     /* row-gap column-gap */
     max-width: 1200px;
@@ -498,10 +537,38 @@ body {
     object-fit: contain;
 }
 
+.logos-grid img[alt="Client Logo 1"] {
+    /* max-height: max-content;
+    max-width: 80px; */
+    margin-top: 10px;
+}
+
 .logos-grid img[alt="Client Logo 2"] {
     max-height: max-content;
     max-width: 80px;
+    padding-bottom: 10px;
+    margin-left: 10px;
 }
+
+.logos-grid img[alt="Client Logo 3"],
+.logos-grid img[alt="Client Logo 5"] {
+    margin-top: 15px;
+}
+
+.logos-grid img[alt="Client Logo 4"] {
+    margin-bottom: 15px;
+}
+
+.logos-grid img[alt="Client Logo 7"] {
+    margin-bottom: 15px;
+}
+
+.logos-grid img[alt="Client Logo 8"] {
+    /* margin-bottom: 15px; */
+}
+
+
+
 
 .logos-grid img[alt="Client Logo 4"],
 .logos-grid img[alt="Client Logo 10"],
@@ -512,8 +579,9 @@ body {
 }
 
 .logos-grid img[alt="Client Logo 6"] {
-    max-height: 55px;
-    max-width: 100px;
+    max-height: 65px;
+    max-width: 140px;
+    margin-bottom: 9px;
 }
 
 .logos-grid img[alt="Client Logo 17"] {
@@ -585,18 +653,7 @@ body {
         max-width: 100px;
     }
 
-    .logos-grid img[alt="Client Logo 5"]
-    .logos-grid img[alt="Client Logo 22"]
-    .logos-grid img[alt="Client Logo 6"]
-    .logos-grid img[alt="Client Logo 18"]
-    .logos-grid img[alt="Client Logo 11"]
-    .logos-grid img[alt="Client Logo 10"]
-    .logos-grid img[alt="Client Logo 28"]
-    .logos-grid img[alt="Client Logo 34"]
-    .logos-grid img[alt="Client Logo 1"]
-    .logos-grid img[alt="Client Logo 23"]
-    .logos-grid img[alt="Client Logo 33"]
-    {
+    .logos-grid img[alt="Client Logo 5"] .logos-grid img[alt="Client Logo 22"] .logos-grid img[alt="Client Logo 6"] .logos-grid img[alt="Client Logo 18"] .logos-grid img[alt="Client Logo 11"] .logos-grid img[alt="Client Logo 10"] .logos-grid img[alt="Client Logo 28"] .logos-grid img[alt="Client Logo 34"] .logos-grid img[alt="Client Logo 1"] .logos-grid img[alt="Client Logo 23"] .logos-grid img[alt="Client Logo 33"] {
         position: relative;
         /* left: 5px; */
         /* width: 79.7591781616211;  */
@@ -667,7 +724,7 @@ body {
 /* For very small screens */
 @media (max-width: 400px) {
     .logos-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         /* Reduce to 2 columns */
         gap: 10px 15px;
     }
@@ -727,9 +784,9 @@ body {
 
 /* Fourth Section (Div-4) - New Styles */
 .ready-to-grow-title {
-    font-family: 'Changa', sans-serif;
+    font-family: 'Changa';
     font-weight: 700;
-    font-size: 75px;
+    font-size: 90px;
     line-height: 118%;
     letter-spacing: 0%;
     text-align: center;
@@ -743,7 +800,7 @@ body {
 }
 
 .ready-to-grow-subtitle {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     font-weight: 600;
     font-size: 24px;
     line-height: 173%;
@@ -779,14 +836,15 @@ body {
 }
 
 .email-phone-prompt .prompt-text {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     font-weight: 300;
     font-size: 18px;
     line-height: 118%;
     letter-spacing: 0%;
     text-align: center;
     color: #000000;
-    margin: 0;
+    white-space: nowrap;
+    /* margin: 0; */
     /* Reset default paragraph margin */
 }
 
@@ -806,13 +864,13 @@ body {
 .form-input {
     width: 100%;
     padding: 15px 20px;
-    border: 1px solid #4F4C4C;
-    border-radius: 8px;
+    border: 1px solid #242424;
+    border-radius: 20px;
     background-color: transparent;
     /* Same as div-4 background */
     color: #4F4C4C;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -843,11 +901,14 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #0D0D0D;
+    color: #4F4C4C;
     /* Checkbox text color */
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    font-family: 'Montserrat';
+    font-weight: 500;
     font-size: 16px;
+    position: relative;
+    left: -90px;
+    margin-bottom: 10px;
 }
 
 .agreement-checkbox input[type="checkbox"] {
@@ -965,7 +1026,7 @@ body {
     /* Constrain width of this group for better readability */
     margin: 0 auto;
     /* Center the group if it's narrower than its grid area */
-    padding-top: 20px;
+    /* padding-top: 20px; */
     /* Space between top row and this row */
 }
 
@@ -977,11 +1038,16 @@ body {
 }
 
 .footer-nav a {
+    font-family: 'Open Sans';
     color: #000000;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     transition: color 0.3s ease;
+}
+
+.arrow {
+    margin-left: 9px;
 }
 
 .footer-nav a:hover {
@@ -990,6 +1056,7 @@ body {
 
 /* Social Media Icons (from previous code) */
 .social-media-icons {
+    margin-top: 7px;
     display: flex;
     gap: 15px;
 }
@@ -1000,16 +1067,16 @@ body {
     align-items: center;
     width: 40px;
     height: 40px;
-    background-color: #171717;
+    background-color: transparent;
     border-radius: 50%;
     text-decoration: none;
     transition: 0.3s ease;
 }
 
 .social-media-icons a img {
-    height: 20px;
-    width: auto;
-    filter: invert(66%) sepia(85%) saturate(300%) hue-rotate(60deg) brightness(90%) contrast(100%);
+    height: 37px;
+    width: 38px;
+    /* filter: invert(66%) sepia(85%) saturate(300%) hue-rotate(60deg) brightness(90%) contrast(100%); */
     transition: filter 0.3s ease;
 }
 
@@ -1036,27 +1103,82 @@ body {
     /* Center text within each block */
 }
 
-.contact-info p,
+
+
 .location-info p,
 .email-info p {
     display: flex;
-    flex-direction: column;
-    /* Stack icon and text vertically */
     align-items: center;
-    /* Center icon and text horizontally */
-    gap: 5px;
-    /* Space between icon and text */
-    margin: 0;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
+    gap: 10px;
+    text-align: left;
+    font-family: 'Open Sans';
+    font-weight: 600;
 }
 
-/* Font Awesome Icon Styling (from previous code) */
-.contact-info .fas,
+.icon-text-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info .icon-text-row {
+    position: relative;
+    left: -190px;
+}
+
+.email-info {
+    position: relative;
+    right: -240px;
+}
+
+.location-info .icon-text-row {
+    position: relative;
+    right: -40px;
+}
+
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    background-color: #171717;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.location-info .icon-wrapper .icon-img {
+    width: 20px;
+    height: 38px;
+}
+
+.icon-wrapper:hover {
+    background-color: #91CC1F;
+}
+
+.icon-wrapper:hover .icon-img {
+    filter: brightness(0) saturate(100%) invert(10%) sepia(9%) saturate(600%) hue-rotate(320deg) brightness(90%) contrast(95%);
+}
+
+.icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+.phone-numbers,
+.location-text,
+.email-text {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    text-align: left;
+    line-height: 160%;
+}
+
 .location-info .fas,
 .email-info .fas {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
@@ -1065,12 +1187,10 @@ body {
     border-radius: 50%;
     color: #91CC1F;
     font-size: 18px;
-    margin-bottom: 5px;
-    /* Space between icon and text below it */
+    flex-shrink: 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.contact-info .fas:hover,
 .location-info .fas:hover,
 .email-info .fas:hover {
     background-color: #91CC1F;
@@ -1292,9 +1412,9 @@ body {
 }
 
 @media screen and (max-width: 480px) {
-    .header-logo img {
+    /* .header-logo img {
         max-width: 120px;
-    }
+    } */
 
     .right-div-paragraph {
         font-size: 16px;
@@ -1334,4 +1454,255 @@ body {
 .fade-in {
     opacity: 1;
     transition: opacity 0.5s ease-out;
+}
+
+@media (max-width: 600px) {
+    .email-phone-prompt .prompt-text {
+        font-family: 'Poppins';
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 158%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #000000;
+        white-space: normal;
+
+        /* margin: 0; */
+        /* Reset default paragraph margin */
+    }
+
+    .email-phone-prompt img {
+        display: none;
+    }
+
+    .ready-to-grow-subtitle {
+        font-family: 'Poppins';
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 173%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #0D0D0D;
+        margin-bottom: 40px;
+        /* Space below subtitle */
+        max-width: 713px;
+        /* As per layout */
+        width: 90%;
+        white-space: normal;
+        /* Responsive width */
+    }
+
+    .ready-to-grow-title {
+        font-family: 'Changa';
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 118%;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #0D0D0D;
+        margin-bottom: 38px;
+        /* Space below title */
+        max-width: 713px;
+        /* As per layout */
+        width: 90%;
+        white-space: normal;
+        /* Responsive width */
+    }
+
+    .header-logo img {
+        width: 166px;
+        height: 56px;
+        opacity: 1;
+        top: 89px;
+        left: -1522px;
+    }
+
+    .agreement-checkbox {
+        display: inline-block;
+        align-items: center;
+        gap: 10px;
+        color: #4F4C4C;
+        /* Checkbox text color */
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 14px;
+        position: relative;
+        left: 0px;
+        margin-bottom: 10px;
+    }
+
+    #agreeCheckbox {
+        position: relative;
+        top: 5px;
+        border: 0px;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .footer-nav {
+        order: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    .footer-nav a {
+        min-width: 90px;
+        text-align: center;
+    }
+
+    .footer-nav a:nth-child(-n+3) {
+        order: 1;
+    }
+
+    .footer-nav a:nth-child(n+4) {
+        order: 2;
+    }
+
+    .social-media-icons-container {
+        order: 3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-media-icons a img {
+        width: 37px;
+        height: 38px;
+    }
+
+    .contact-details-group {
+        order: 4;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 10px;
+        padding: 0 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .footer-logo-container {
+        order: 5;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* مهم: نتأكد كل عنصر ظاهر */
+    .footer-logo-container,
+    .footer-nav,
+    .social-media-icons-container,
+    .contact-details-group {
+        display: flex;
+    }
+
+
+    .contact-info,
+    .location-info,
+    .email-info {
+        flex: 1;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .contact-info {
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .location-info {
+        text-align: center;
+        align-items: center;
+    }
+
+    .email-info {
+        text-align: right;
+        align-items: flex-end;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-text-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .email-info .icon-text-row {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        /* بدل center */
+    }
+
+    .contact-info .icon-text-row,
+    .location-info .icon-text-row {
+        position: static;
+    }
+
+    .phone-numbers,
+    .location-text,
+    .email-text {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .icon-img {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .icon-wrapper {
+        width: 32px;
+        height: 32px;
+        margin-bottom: 5px;
+    }
+
+}
+
+#agreeCheckbox {
+    position: relative;
+    top: 5px;
+    border: 0px;
+}
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+
+.custom-checkbox .checkmark {
+    width: 18px;
+    height: 18px;
+    background-color: #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+
+.custom-checkbox input[type="checkbox"]:checked+.checkmark {
+    background-color: green;
+}
+
+.icon-wrapper.no-bg {
+    background-color: transparent;
 }
